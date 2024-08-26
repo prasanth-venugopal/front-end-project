@@ -1,0 +1,94 @@
+/* Container for the search form */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  /* Styling for the search input */
+  input[type="text"].form-control-lg {
+    width: 300px; 
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Styling for the submit button */
+  input[type="submit"].btn {
+    background-color: transparent; 
+    color: #fff; 
+    font-size: 1.5rem; 
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+   
+  }
+  
+  /* Hover effect for the submit button */
+  input[type="submit"].btn:hover {
+    color: black;
+    background-color: hsl(0, 0%, 100%); 
+    box-shadow: 0 0 10px #fffb00;
+  }
+  
+  /* Styling for the pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination .page-item {
+    margin: 0 5px;
+  }
+  
+  .pagination .page-link {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for pagination links */
+  .pagination .page-link:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styling for the images */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow around images */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    form {
+      flex-direction: column;
+    }
+  
+    input[type="text"].form-control-lg {
+      width: 80%; /* Adjust width for mobile */
+      margin-bottom: 10px;
+    }
+  
+    input[type="submit"].btn {
+      width: 80%; /* Adjust button width for mobile */
+    }
+  }
+  

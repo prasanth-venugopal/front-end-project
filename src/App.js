@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
 import './App.css';
+import Counter from './counter/counter'
+import TodoList from './todolist/todo'
+import ImageSearch from './Imagesearch/Imagesearch';
+import WeatherApp from './weatherapp/weatherapp'
+import './navbar.css'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='navigation-bar' >
+    <BrowserRouter>
+    <nav className="navbar navbar-expand-lg">
+    <ul className="navbar-nav " typeof='none'>
+      <li className="nav-link"> <Link to="/counter">Counter</Link></li>
+      <li className="nav-link"><Link to="/todo">Todo</Link></li>
+      <li className="nav-link"> <Link to="/imagesearch">ImageSearch</Link></li>
+      <li className="nav-link"> <Link to="/weatherapp">WeatherApp</Link></li>
+    </ul>
+     
+     
+    
+  </nav>
+  <Routes>
+        <Route path="counter" element={<Counter></Counter>}></Route>
+        <Route path="todo" element={<TodoList></TodoList>}></Route>
+        <Route path="imagesearch" element={<ImageSearch></ImageSearch>}></Route>
+        <Route path="weatherapp" element={<WeatherApp></WeatherApp>}></Route>
+  </Routes>
+   </BrowserRouter>
+  
     </div>
+   </>
   );
 }
 
 export default App;
+
+
+
+
